@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+    int m,n;                 //Matrix Size Declaration
+    printf("Enter the number of rows and column: \n");
+    scanf("%d %d",&m,&n);   //Matrix Size Initialization
+    int arr[10][10];        //Matrix Size Declaration
+    printf("\nEnter the elements of the matrix: \n");
+    for(int i=0;i<m;i++)    //Matrix Initialization
+    {
+        for(int j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    printf("\nThe elements in the matrix are: \n");
+    for(int i=0;i<m;i++)     //Print the matrix
+    {
+        for(int j=0;j<n;j++)
+        {
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Enter row number:");
+    int x,j=0;
+    scanf("%d", &x);
+    int res[m], max=0;
+    for(int i=0;i<m;i++)
+    {   
+       if(i==x) 
+       {
+       for (int j = 0; j < n; j++)
+       {
+           if (arr[i][j] > max)
+           {
+              max = arr[i][j];
+           }
+        }
+       }
+        
+    }
+    printf("%d is largest",max);
+    return 0;
+}
+
+
